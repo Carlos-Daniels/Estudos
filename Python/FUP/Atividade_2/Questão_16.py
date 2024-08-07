@@ -4,4 +4,13 @@ minutos e segundos.
 """ 
 def converter (segundos):
     if segundos < 0:
-        retru
+        return "por favor, insira um valor inteiro positivo em segundos"
+    horas = segundos // 3600
+    minutos = (segundos % 3600) // 60
+    segundos_restantes = segundos % 60
+
+    return horas, minutos, segundos_restantes
+
+segundos = int(input("Digite um numero inteiro positivo em segundos: "))
+resultado = converter(segundos)
+print (f"{segundos} segundos equivalem {resultado} ")
